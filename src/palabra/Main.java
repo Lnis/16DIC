@@ -15,16 +15,17 @@ public class Main {
 		scanner1 = new Scanner(System.in);
 		word = scanner1.nextLine();
 		
-		System.out.println("Dime posicion");
-		scanner2 = new Scanner(System.in);
-		num = scanner2.nextInt();
+	//	System.out.println("Dime posicion");
+	//	scanner2 = new Scanner(System.in);
+	//	num = scanner2.nextInt();
 		
-		LetrasPalabra.Imprimir(word);
-		CadenaFor.ImprimirFor(word);
-		NPrimerasLetras.RecorrerPrimeras(word, num);
-		NUltimasLetras.RecorrerUltimas(word, num);
-		veces=VecesLetra.Contenida(word,letra);
-		System.out.println("La letra "+letra+" está "+veces+" veces en la palabra "+word);
+	//	LetrasPalabra.Imprimir(word);
+	//	CadenaFor.ImprimirFor(word);
+	//	NPrimerasLetras.RecorrerPrimeras(word, num);
+	//	NUltimasLetras.RecorrerUltimas(word, num);
+	//	veces=VecesLetra.Contenida(word,letra);
+	//	System.out.println("La letra "+letra+" está "+veces+" veces en la palabra "+word);
+		AlReves.Invertir(word);
 		
 		System.out.println("FIN");
 	}
