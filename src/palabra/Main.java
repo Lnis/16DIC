@@ -8,6 +8,7 @@ public class Main {
 		Scanner scanner1 = null;
 		Scanner scanner2 = null;
 		int num=0;
+		int veces=0;
 		char letra='a';
 		
 		System.out.println("Dime palabra");
@@ -22,7 +23,8 @@ public class Main {
 		CadenaFor.ImprimirFor(word);
 		NPrimerasLetras.RecorrerPrimeras(word, num);
 		NUltimasLetras.RecorrerUltimas(word, num);
-		VecesLetra.Contenida(word,letra);
+		veces=VecesLetra.Contenida(word,letra);
+		System.out.println("La letra "+letra+" está "+veces+" veces en la palabra "+word);
 		
 		System.out.println("FIN");
 	}

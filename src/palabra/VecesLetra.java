@@ -2,7 +2,7 @@ package palabra;
 
 public class VecesLetra {
 	
-	public static void Contenida (String palabra,char letra)
+	public static int Contenida (String palabra,char letra)
 	{
 		int longitud=palabra.length();
 		int indi=0;
@@ -16,7 +16,7 @@ public class VecesLetra {
 			}
 			indi++;
 		}
-		System.out.println("La letra "+letra+" está "+cantidad+" veces en la palabra "+palabra);
+		return cantidad;
 	}
 
 }
