@@ -2,62 +2,48 @@ package edu.femxa.herencia;
 
 public class Cesar {
 	
-	public void mostrarCodChars (String cadena)
-	{
-		int longi =cadena.length();
-		int numero_caract=0;
-		char caracter=0;
-		
-		for(int pos=0; pos<longi;pos++)
-		{
-			caracter=cadena.charAt(pos);
-			numero_caract=(int) caracter;
-			System.out.println(cadena.charAt(pos)+" = "+numero_caract);
-		}
-	}
-	
-	public String CodigoCesar(String cadena, int codigo)
-	{
-		String cifrado = "";
-		int longi =cadena.length();
-		int numero_caract=0;
-		char caracter=0;
-		int pos=0;
-		
-		for(pos=0; pos<longi;pos++)
-		{
-		System.out.print(cadena.charAt(pos));
-		}
-		
-		System.out.println();
-		
-		for(pos=0; pos<longi;pos++)
-		{
-			caracter=cadena.charAt(pos);
-			if(caracter!=' '){
-				numero_caract=(int) caracter + codigo;
-				
-			}
-			else
-			{
-				numero_caract=cadena.charAt(pos);
-			}
-		//	System.out.println(cadena.charAt(pos)+" = "+(char)numero_caract);
-		//	System.out.print((char)numero_caract);
-			cifrado=cifrado+(char)numero_caract;
-			
-		}
-		return cifrado;
-	}
-	
 	public static void main(String[] args) {
-		Cesar cesar=null;
-		String texto_final=null;
+		Cesar cesar = null;
 		
-		cesar=new Cesar();
-	//	cesar.mostrarCodChars("LOLIPOP");
-		texto_final=cesar.CodigoCesar("BUENAS TARDES",3);
-		System.out.print(texto_final);
+		cesar = new Cesar();
+		String resultado = cesar.cifradoCesar("PAPI CHULO", 1);
+		System.out.println(resultado);
+	}
+
+	public String cifradoCesar(String palabra, int clave)
+		{
+		String palabra_cifrada = null;
+		int longi = palabra.length();
+		char caracter_actual = 0;
+		int numero_caracter = 0;
+		char caracter_cifrado = 0;
+			
+			palabra_cifrada = new String();
+				
+			for (int pos = 0; pos < longi; pos++)
+			{
+				caracter_actual = palabra.charAt(pos);
+				if (caracter_actual != ' ')
+				{
+					caracter_cifrado=traduceCharCesar(caracter_actual, clave);
+					palabra_cifrada = palabra_cifrada + caracter_cifrado;
+				} else { palabra_cifrada = palabra_cifrada + caracter_actual;}
+					
+			}
+			
+		return palabra_cifrada;
+	}	
+
+	
+	public char traduceCharCesar(char c, int k)
+	{
+		char caracter=0;
+		int num_letra=(int)c;
+		
+		num_letra=num_letra+k;
+		caracter=(char)num_letra;
+		
+		return caracter;
 	}
 
 }
