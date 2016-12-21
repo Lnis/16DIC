@@ -32,7 +32,7 @@ public class Alumno extends Persona
 		Alumno alumno2=null;
 		
 		alumno2=(Alumno)obj;
-		if(this.getNombre().equals(alumno2.getNombre()) && this.getEdad().equals(alumno2.getEdad()) && this.getNota().equals(alumno2.getNota()))
+	//	if(this.getNombre().equals(alumno2.getNombre()) && this.getEdad().equals(alumno2.getEdad()) && this.getNota().equals(alumno2.getNota()))
 				{
 					var=true;
 				}
