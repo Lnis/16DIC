@@ -12,7 +12,7 @@ public class VentanaTexto {
 		miVentana.setTitle ("Trolorolorolo"); //le ponemos título a nuestra ventana
 		//Creamos un campo de texto
 		JTextPane miCampoDeTexto = new JTextPane();
-		miCampoDeTexto.setText("CORRE PLÁTANO,HUYE TÚ QUE PUEDES");
+		miCampoDeTexto.setText("CORRE PLÁTANO, HUYE TÚ QUE PUEDES");
 		//ahora metemos el campo de texto en la ventana
 		miVentana.add(miCampoDeTexto);
 	        
