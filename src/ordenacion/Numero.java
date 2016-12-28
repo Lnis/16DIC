@@ -21,21 +21,15 @@ public class Numero {
 		return numero_usuario;
 	}
 	
-	public static int[] posicion(int [] array, int num, int cont)
+	public static void correrPos (int [] ae, int pos, int num)	
 	{
-		int i=cont;
-		//int longi=array.length;
-	//	for (int i=0;i<cont;i++){
-			if(num<array[i]){
-				array[i+1]=array[i];
-				array[i]=num;
-			}
-			else{
-				array[i+1]=num;
-			}
-		//}
-		return array;
-	}
+		
+		for(int i=ae.length-1;i>pos;i--){
+			ae[i]=ae[i-1];
+		}
+		ae[pos]=num;
+			
+		}
 	
 	public static void ordenoArray(int [] array)
 	{
@@ -48,5 +42,15 @@ public class Numero {
                      array[j]=aux;
                   }
 }
+	public static int obtenerPos (int [] ae, int n)
+	{
+		int pos = 0;
+		
+		while(ae[pos]<n && pos<ae.length){
+			pos++;
+			}
+		return pos;
+	}
+	
 }
 
