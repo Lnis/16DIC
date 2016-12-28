@@ -21,15 +21,19 @@ public class Numero {
 		return numero_usuario;
 	}
 	
-	public static int[] posicion(int [] array, int num)
+	public static int[] posicion(int [] array, int num, int cont)
 	{
-		int longi=array.length;
-		for (int i=0;i<longi;i++){
+		int i=cont;
+		//int longi=array.length;
+	//	for (int i=0;i<cont;i++){
 			if(num<array[i]){
 				array[i+1]=array[i];
 				array[i]=num;
 			}
-		}
+			else{
+				array[i+1]=num;
+			}
+		//}
 		return array;
 	}
 	
