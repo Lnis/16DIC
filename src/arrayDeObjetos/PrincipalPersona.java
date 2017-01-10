@@ -32,7 +32,17 @@ public class PrincipalPersona {
 			System.out.println("Elige la opción que desees para continuar");
 			System.out.print(" 1. INSERTAR PERSONA \n 2. LISTAR PERSONAS \n 3. BUSCAR PERSONA POR NOMBRE \n 4. BORRAR PERSONA \n 5. SALIR \n 6. ORDENAR POR EDAD \n 7. INSERTAR ORDENADO (SE RECOMIENDA EJECUTAR PRIMERO EL PASO 6) \n");
 			scaner = new Scanner(System.in);
-			opcion = scaner.nextInt();
+			try{
+				opcion = scaner.nextInt();
+				}
+				catch (java.util.InputMismatchException e) //error con otros caracteres
+				{
+				opcion = 0;
+				scanner = new Scanner(System.in);
+				System.out.println("Error: valor no válido");
+				}
+			
+		
 			
 			switch (opcion) {
 			case 1: 
@@ -133,5 +143,5 @@ public class PrincipalPersona {
 		}
 			
 	}
-
 }
+
