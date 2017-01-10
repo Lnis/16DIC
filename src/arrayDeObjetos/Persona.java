@@ -142,4 +142,24 @@ public class Persona {
 			aper[i]=aper[i-1];
 		}
 	}
+	
+	public int PosicionPersona(Persona [] aper, int n_p) {
+
+		boolean coinc=false;
+		int pos=-5;
+		int i=0;
+		
+		while (i<n_p && !coinc){
+			if(nombre.compareTo(aper[i].nombre)==0){
+			pos=i+1;
+			coinc=true;
+		}
+			i++;
+		}
+		
+		if(!coinc) {
+		System.out.println("NO COINCIDENCIA");
+		}
+		return pos;
+}
 }

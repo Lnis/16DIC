@@ -30,7 +30,7 @@ public class PrincipalPersona {
 		while (opcion!=5){
 			
 			System.out.println("Elige la opción que desees para continuar");
-			System.out.print(" 1. INSERTAR PERSONA \n 2. LISTAR PERSONAS \n 3. BUSCAR PERSONA POR NOMBRE \n 4. BORRAR PERSONA \n 5. SALIR \n 6. ORDENAR POR EDAD \n 7. INSERTAR ORDENADO (SE RECOMIENDA EJECUTAR PRIMERO EL PASO 6) \n");
+			System.out.print(" 1. INSERTAR PERSONA \n 2. LISTAR PERSONAS \n 3. BUSCAR PERSONA POR NOMBRE \n 4. BORRAR PERSONA \n 5. SALIR \n 6. ORDENAR POR EDAD \n 7. INSERTAR ORDENADO (SE RECOMIENDA EJECUTAR PRIMERO EL PASO 6) \n 8. BUSCAR POSICION DE LA PERSONA POR NOMBRE \n");
 			scaner = new Scanner(System.in);
 			try{
 				opcion = scaner.nextInt();
@@ -133,6 +133,15 @@ public class PrincipalPersona {
 				array_persona[posi] = persona_aux;	//Introdicimos la nueva persona en la posición que obtuvimos previamente
 				
 				n_personas++;
+				break;
+				
+			case 8:
+				System.out.println("Has elegido buscar la posicion de una persona");
+				System.out.println("Introduce el nombre de la persona de la que quieres buscar datos");
+				scanner = new Scanner(System.in);
+				nombre = scanner.next();
+				persona_aux=new Persona(nombre,0);
+				System.out.println("La persona está en posicion: " +persona_aux.PosicionPersona(array_persona, n_personas));
 				break;
 				
 			default:
