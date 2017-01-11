@@ -22,8 +22,8 @@ public class PrincipalPersona extends JFrame {
 			add(new JButton("* BORRAR PERSONA"));
 			add(new JButton("* ORDENAR POR EDAD"));
 			add(new JButton("* INSERTAR ORDENADO"));
-		setLayout(new BorderLayout(5, 10));
-			add(new JButton("SALIR"), BorderLayout.SOUTH);
+	//	setLayout(new BorderLayout(5, 10));
+	//		add(new JButton("SALIR"), BorderLayout.SOUTH);
 		setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 		setSize(260,400);
 		setVisible(true);
