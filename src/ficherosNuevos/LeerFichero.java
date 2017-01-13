@@ -14,10 +14,24 @@ public class LeerFichero {
 		int a = filereader.read();
 		int b = filereader.read();
 		char c = (char)a;	//CASTING!: Conversión de el valor de a en una letra
-		
-		System.out.println(a);
+		char d = (char)b;
+/*		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c);
-	}
+		System.out.println(d);*/
+		
+		int i=0;
+		int charAux;
+		int suma=0;
+		i=filereader.read();
+		while(i!=-1){
 
+			char aux=(char) i;
+			suma = suma+i;
+			System.out.println("La letra actual es "+aux);
+			i=filereader.read();
+		
+		}
+		filereader.close();
+	}	
 }
