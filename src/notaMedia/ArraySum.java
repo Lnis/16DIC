@@ -2,7 +2,7 @@ package notaMedia;
 
 public class ArraySum {
 	
-	private static int[] array_notas = {0, 10, 2, 6, 7, 5, 4};
+	private int[] array_notas = {0, 10, 2, 6, 7, 5, 4};
 	
 	public static void main(String[] args) {
 		ArraySum a = new ArraySum();
