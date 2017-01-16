@@ -11,7 +11,9 @@ public class ArraySum {
 
 		media=media/nota.length;
 		System.out.println("La media es "+media);
-			
+	/**
+	 * Suma los int de un array		
+	 */
 	}
 	public static float sumaNota (int an[]){
 	float suma=0;
@@ -22,6 +24,10 @@ public class ArraySum {
 	return suma;
 	
 }
+	/**
+	 * Para acceder a los int del array private
+	 * @return el array cuyos valores solo son accesibles mediante obtejo de la clase
+	 */
 	public int[] getVariable() 
 	{ 
 		return array_notas; 
