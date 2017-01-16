@@ -8,12 +8,12 @@ public class Codificar {
 
 	public static void main(String[] args) throws IOException {
 		
-		File archivo = new File("C:\\Users\\Elena\\git\\16DIC\\Carpetilla\\Envio\\TopSecret.txt");
+		File archivo = new File("C:\\Users\\Alumno\\git\\16DIC\\Carpetilla\\Envio\\TopSecret.txt");
 		FileReader filereader=new FileReader (archivo);
 		File file=null;
 		String[] ficheros=null;
 
-		file= new File("C:/Users/Elena/git/16DIC/Carpetilla/Envio");
+		file= new File("C:/Users/Alumno/git/16DIC/Carpetilla/Envio");
 		ficheros=file.list();
 		
 		for(int i=0; i<ficheros.length; i++){
@@ -28,7 +28,7 @@ public class Codificar {
 			ficheros[i]=decodificado;
 		}
 		
-/*		int a = filereader.read();
+		int a = filereader.read();
 		int charAux;
 		int suma=0;
 		int codificado=0;
