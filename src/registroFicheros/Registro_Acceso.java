@@ -27,7 +27,7 @@ public class Registro_Acceso {
 				}
 				catch (java.util.InputMismatchException e) //error con otros caracteres
 				{
-				opcion = 0;
+				opcion = 5;
 				System.out.println("Error: valor no válido");
 				}
 			
@@ -38,6 +38,9 @@ public class Registro_Acceso {
 			case 2:
 				Acceder();
 				break;
+			default:
+				System.out.println("Opción no válida");
+				break;	
 			}
 
 		}
@@ -165,6 +168,7 @@ public class Registro_Acceso {
 			letra=(char) (passw.charAt(i)-14);
 			codificada+=letra;
 		}
+		
 		return codificada;
 	}
 	public static void Acceder() throws IOException{
