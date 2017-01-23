@@ -36,11 +36,13 @@ public class BaseDatos {
 			//Sea como sea, es, <<oye, si te piden una conexión, se la pides a esa clase!>>
 			conn = DriverManager.getConnection ("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password");
   	       stmt = conn.createStatement();
+
   	       
   	       rset = stmt.executeQuery(Consultas.CONSULTA_EMPLEADOS_SALARIO_DESC);//ascendente=ASC; descendente=DESC
 //  	   rset = stmt.executeQuery("SELECT department_name FROM departments WHERE department_id ="+e.getDpto()); //Sería otra forma de hacer la consulta de la linea de arriba   
   	       while (rset.next()){
   	    	   Empleado empleado1 = new Empleado(rset.getInt("EMPLOYEE_ID"), rset.getString("FIRST_NAME"), rset.getInt("SALARY"), rset.getInt("DEPARTMENT_ID"), rset.getString("DEPARTMENT_NAME"));
+  	    	   
   	    	   lista_empleados.add(empleado1);
 /*			while (rset.next()){
 //			        System.out.println (rset.getString(1));  
@@ -50,6 +52,7 @@ public class BaseDatos {
 			        System.out.println("Nombre = "+nombre+" ID = "+id);
 */
   	    	 }
+  	       
   	     mostrarLista(lista_empleados);
 		}
 		catch(Exception e)

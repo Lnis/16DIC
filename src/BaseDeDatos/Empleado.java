@@ -50,5 +50,9 @@ public class Empleado {
 		this.n_dpto = n_dpto;
 	}
 
+/*	public Empleado SubirSueldo (Empleado e){
+		e.salario = (int)1.2*e.getSalario();
+		return e;
+	}*/
 	
 }
