@@ -6,6 +6,7 @@ package ObjetosDAO_DTO;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -44,7 +45,7 @@ public class EmployeeDAO {
 	}
 	
 	
-	public List<EmployeeDTO> consultaAllEmpleados ()
+	public List<EmployeeDTO> consultaAllEmpleados () throws SQLException
 	{
 		List<EmployeeDTO>  employeesList = null;
 		employeesList = new ArrayList<EmployeeDTO>();
@@ -102,5 +103,10 @@ public class EmployeeDAO {
 		return employeesList;
 			
 	}
+		finally
+		{
+			
+		}
 	
+}
 }
