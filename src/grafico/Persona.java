@@ -1,4 +1,4 @@
-package array.grafico;
+package grafico;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
