@@ -6,7 +6,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class ParserLibroXML extends DefaultHandler{
+public class ParserLibrosXML extends DefaultHandler{
 	private Libro libro;
 	private String valor_actual;
 	@Override
@@ -14,10 +14,10 @@ public class ParserLibroXML extends DefaultHandler{
 		// TODO Auto-generated method stub
 		//super.startDocument();
 		System.out.println("INICIO DEL DOCUMENTO");
-		this.libro=new Libro();	//Crea un objeto libro al empezar el documento
+		String [] aLibros = new String [4];
 	}
 	@Override
-	public void endDocument() throws SAXException { //esto lo hará cuando lea la etiqueta </libro>
+	public void endDocument() throws SAXException {
 		// TODO Auto-generated method stub
 		//super.endDocument();
 		System.out.println("FIN DEL DOCUMENTO");
@@ -33,6 +33,7 @@ public class ParserLibroXML extends DefaultHandler{
 			Attributes attributes) throws SAXException {
 		// TODO Auto-generated method stub
 		//super.startElement(uri, localName, qName, attributes);
+		this.libro=new Libro();
 		System.out.println("StartElement = " + localName);
 		if(localName.equals("libro"))
 		{
@@ -41,7 +42,7 @@ public class ParserLibroXML extends DefaultHandler{
 		}
 	}
 	@Override
-	public void endElement(String uri, String localName, String qName)	//lo va haciendo según encuantra las etiquetas </titulo>, </autor> ...
+	public void endElement(String uri, String localName, String qName)
 			throws SAXException {
 		// TODO Auto-generated method stub
 		//super.endElement(uri, localName, qName);
@@ -61,7 +62,7 @@ public class ParserLibroXML extends DefaultHandler{
 		}
 	}
 	@Override
-	public void characters(char[] ch, int start, int length)	//toma el valor que hay entre las etiquetas
+	public void characters(char[] ch, int start, int length)
 			throws SAXException {
 		// TODO Auto-generated method stub
 		//super.characters(ch, start, length);

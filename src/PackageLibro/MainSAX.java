@@ -17,8 +17,8 @@ public class MainSAX {
 		ParserLibroXML parserLibro = null;
 		parserLibro = new ParserLibroXML();
 		
-		reader.setContentHandler(parserLibro);
+		reader.setContentHandler(parserLibro);	//Cuando va leyendo las etiquetas <libro>, <titulo>, <autor>, va llamando a la clase ParserLibreXML
 		
-		reader.parse(new InputSource(new FileInputStream("libro.xml")));
+		reader.parse(new InputSource(new FileInputStream("libros.xml")));
 	}
 }

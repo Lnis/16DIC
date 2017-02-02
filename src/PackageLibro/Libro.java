@@ -31,7 +31,7 @@ public class Libro {
 		return anyo;
 	}
 	public void setAnyo(String anyo) {
-		this.anyo = year;
+		this.anyo = anyo;
 	}
 	public String getEditorial() {
 		return editorial;
